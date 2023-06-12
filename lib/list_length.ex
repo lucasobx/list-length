@@ -1,11 +1,10 @@
 defmodule ListLength do
 
-  def call(list), do: list_length(list, 0)
+  def call(list), do: l_length(list, 0)
 
-  defp list_length([], acc), do: acc
-
-  defp list_length([_head | tail], acc) do
+  defp l_length([], acc), do: acc
+  defp l_length([_h | tail], acc) do
     acc = acc + 1
-    list_length(tail, acc)
+    l_length(tail, acc)
   end
 end
